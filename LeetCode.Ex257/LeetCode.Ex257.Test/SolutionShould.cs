@@ -1,4 +1,5 @@
-﻿using Should;
+﻿using System.Collections.Generic;
+using Should;
 using Xunit;
 
 namespace LeetCode.Ex257.Test
@@ -7,7 +8,7 @@ namespace LeetCode.Ex257.Test
     {
         [Theory]
         [ClassData(typeof(TreeNodeTheoryData))]
-        public void ShouldReturnCorrectResultWhenSolutionExists(TreeNode rootNode, string[] expectedResult)
+        public void ShouldReturnCorrectResultWhenSolutionExists(TreeNode rootNode, IList<string> expectedResult)
         {
             var solution = new Solution();
             var actualResult = solution.BinaryTreePaths(rootNode);
